@@ -13,6 +13,7 @@ function successGetGameOfThronesCharacterDatas(xhttp) {
   // Nem szabad globálisba kitenni a userDatas-t!
   var userDatas = JSON.parse(xhttp.responseText);
   // Innen hívhatod meg a többi függvényed
+  sorbarendezes(userDatas);
   namesandportraits(userDatas);
   console.log('object');
 }
@@ -32,4 +33,13 @@ function namesandportraits(userDatas) {
  </div></div> `;
   }
   document.querySelector('.portraitcontainer').innerHTML = tomb;
+}
+function sorbarendezes(userDatas) {
+  userDatas.sort(function (first, second) {
+    if (first.name > second.name) {
+      1;
+    } else {
+      return -1;
+    }
+  });
 }
