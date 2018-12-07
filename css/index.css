@@ -1,0 +1,45 @@
+
+
+
+body {
+
+background: url("../assets/site/mapblue.jpg") 
+
+
+
+}
+.card {
+float: left;
+	position: relative;
+	vertical-align: middle;
+
+
+
+
+}
+.portraitcontainer {
+
+
+
+
+
+}
+
+.bgleft {
+    
+   width: 70%;
+   position: absolute;
+   left: 0px;
+   height: 100%;
+ 
+
+    
+}
+.bgright {
+  
+    width: 30%;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+background-color: aqua
+}

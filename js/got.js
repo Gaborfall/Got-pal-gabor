@@ -13,9 +13,9 @@ function successGetGameOfThronesCharacterDatas(xhttp) {
   // Nem szabad globálisba kitenni a userDatas-t!
   var userDatas = JSON.parse(xhttp.responseText);
   // Innen hívhatod meg a többi függvényed
+
   sorbarendezes(userDatas);
   namesandportraits(userDatas);
-  console.log('object');
 }
 
 getGameOfThronesCharacterDatas(
@@ -25,21 +25,36 @@ getGameOfThronesCharacterDatas(
 
 // Live servert használd mindig!!!!!
 /* IDE ÍRD A FÜGGVÉNYEKET!!!!!! NE EBBE AZ EGY SORBA HANEM INNEN LEFELÉ! */
-function namesandportraits(userDatas) {
-  var tomb = '';
-  for ( var i = 0; i < userDatas.length; i += 1) {
-    tomb += `<div class='card'> <img src=${userDatas[i].portrait}>
-  <div><p>${userDatas[i].name}</p>
- </div></div> `;
+
+
+function elohalott(userDatas) {
+  var alive = [];
+  for (var l = 0; l < userDatas.length; l++) {
+    if (userDatas[l].dead !== true) {
+      alive.push(userDatas[l]);
+    }
   }
-  document.querySelector('.portraitcontainer').innerHTML = tomb;
+
+  return alive;
 }
+
 function sorbarendezes(userDatas) {
   userDatas.sort(function (first, second) {
     if (first.name > second.name) {
-      1;
-    } else {
-      return -1;
+      return 1;
     }
+    return -1;
   });
+}
+
+function namesandportraits(userDatas) {
+  var tomb = '';
+
+  for ( var i = 0; i < elohalott(userDatas).length; i += 1) {
+    tomb += `<div class='card'> <img src=${elohalott(userDatas)[i].portrait}>
+  <div><p>${elohalott(userDatas)[i].name}</p>
+ </div></div> `;
+  }
+
+  document.querySelector('.portraitcontainer').innerHTML = tomb;
 }
