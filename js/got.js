@@ -114,3 +114,12 @@ function callbio(a, b) {
     document.querySelector('.bio').appendChild(biop);
   }
 }
+function searchbio(name) {
+  var what = new RegExp(name, 'i');
+  document.querySelectorAll('.card').forEach(function (card) {
+    if (card.innerHTML.search(what) > 0) {
+      card.click.apply(card);
+    }
+  });
+}
+

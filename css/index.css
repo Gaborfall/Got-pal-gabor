@@ -60,3 +60,20 @@ background-color: fuchsia;
 	overflow-x: hidden;
     height: 100%;
 }
+.nagykep {
+    height: 200px;
+    width: 250px;
+}
+.nagykep.img{
+    height: 200px;
+    width: 250px;
+    overflow: hidden;
+    
+    float: left;
+	text-align: center;
+}
+
+
+
+
+
