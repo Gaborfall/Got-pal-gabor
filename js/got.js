@@ -57,6 +57,9 @@ function namesandportraits(userDatas) {
   }
 
   document.querySelector('.portraitcontainer').innerHTML = tomb;
+  var imgTag = document.getElementById('kep2');
+  imgTag.addEventListener('click', function () {
+    alert('region number');
+  });
 }
-
 

@@ -12,7 +12,7 @@ float: left;
 	position: relative;
 	vertical-align: middle;
 width:12%;
-    
+    text-align: center;
 
 
 }
@@ -51,8 +51,10 @@ position: absolute;
 
 }
 .gomb{
-height: 500px;
-width: 100%;
+position: absolute;
+bottom:0;
+right:0;
+
 background-color: fuchsia;
 
 
