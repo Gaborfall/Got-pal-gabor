@@ -47,19 +47,70 @@ function sorbarendezes(userDatas) {
   });
 }
 
-function namesandportraits(userDatas) {
-  var tomb = '';
 
-  for ( var i = 0; i < elohalott(userDatas).length; i += 1) {
-    tomb += `<div class='card' id='kep${[i]}'> <img src=${elohalott(userDatas)[i].portrait}>
-  <div><p>${elohalott(userDatas)[i].name}</p>
- </div></div> `;
+function namesandportraits(userDatas) {
+  var charbioimg = [];
+  var charbiotext = [];
+  /*
+	for (var i = 0; i < elohalott(userDatas).length; i += 1) {
+		var portdiv = document.createElement("div");
+		portdiv.className = "card";
+
+		var portimg = document.createElement("img");
+		portimg.src = elohalott(userDatas)[i].portrait;
+		portdiv.appendChild(portimg);
+
+		var portnamediv = document.createElement("div");
+		var portp = document.createElement("p");
+		var portname = document.createTextNode(elohalott(userDatas)[i].name);
+		portp.appendChild(portname);
+		portnamediv.appendChild(portp);
+		portdiv.appendChild(portnamediv);
+
+		document.querySelector('.portraitcontainer').appendChild(portdiv);
+		charbioimg[i] = elohalott(userDatas)[i].picture;
+		charbiotext[i] = elohalott(userDatas)[i].bio;
+	}
+	document.querySelectorAll('.card').forEach(function (card, index) {
+		card.addEventListener('click', function () {
+			callbio(charbioimg[index] , charbiotext[index]);
+		});
+	});
+	*/
+
+  var tomb = '';
+  for (var i = 0; i < elohalott(userDatas).length; i += 1) {
+    tomb += `<div class='card'><img src=${elohalott(userDatas)[i].portrait}><div><p>${elohalott(userDatas)[i].name}</p></div></div> `;
+    charbioimg[i] = elohalott(userDatas)[i].picture;
+    charbiotext[i] = elohalott(userDatas)[i].bio;
   }
 
   document.querySelector('.portraitcontainer').innerHTML = tomb;
-  var imgTag = document.getElementById('kep2');
-  imgTag.addEventListener('click', function () {
-    alert('region number');
+
+  document.querySelectorAll('.card').forEach(function (card, index) {
+    card.addEventListener('click', function () {
+      callbio(charbioimg[index], charbiotext[index]);
+    });
   });
 }
 
+function callbio(a, b) {
+  if (document.querySelector('#BioKep') != null) {
+    document.querySelector('#BioKep').src = a;
+  } else {
+    var bioimg = document.createElement('img');
+    bioimg.src = a;
+    bioimg.id = 'BioKep';
+    document.querySelector('.nagykep').appendChild(bioimg);
+  }
+
+  if (document.querySelector('#BioText') != null) {
+    document.querySelector('#BioText').innerHTML = b;
+  } else {
+    var biop = document.createElement('p');
+    biop.id = 'BioText';
+    var bioptext = document.createTextNode(b);
+    biop.appendChild(bioptext);
+    document.querySelector('.bio').appendChild(biop);
+  }
+}
