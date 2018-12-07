@@ -1,10 +1,9 @@
 
-
-
 body {
+    margin: 0 auto;
+    background: url("../assets/site/mapblue.jpg")  ;
 
-background: url("../assets/site/mapblue.jpg") 
-
+    
 
 
 }
@@ -12,8 +11,8 @@ background: url("../assets/site/mapblue.jpg")
 float: left;
 	position: relative;
 	vertical-align: middle;
-
-
+width:12%;
+    
 
 
 }
@@ -27,7 +26,7 @@ float: left;
 
 .bgleft {
     
-   width: 70%;
+   width: 80%;
    position: absolute;
    left: 0px;
    height: 100%;
@@ -36,10 +35,27 @@ float: left;
     
 }
 .bgright {
-  
-    width: 30%;
+    
+    width: 20%;
     position: absolute;
     right: 0px;
-    height: 100%;
+    height: 110%;
 background-color: aqua
 }
+.input{
+bottom:0;
+position: absolute;
+
+
+
+
+}
+.gomb{
+height: 500px;
+width: 100%;
+background-color: fuchsia;
+
+
+
+}
+

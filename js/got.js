@@ -51,10 +51,12 @@ function namesandportraits(userDatas) {
   var tomb = '';
 
   for ( var i = 0; i < elohalott(userDatas).length; i += 1) {
-    tomb += `<div class='card'> <img src=${elohalott(userDatas)[i].portrait}>
+    tomb += `<div class='card' id='kep${[i]}'> <img src=${elohalott(userDatas)[i].portrait}>
   <div><p>${elohalott(userDatas)[i].name}</p>
  </div></div> `;
   }
 
   document.querySelector('.portraitcontainer').innerHTML = tomb;
 }
+
+
