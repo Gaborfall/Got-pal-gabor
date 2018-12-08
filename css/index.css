@@ -1,78 +1,83 @@
 
 body {
     margin: 0 auto;
-    background: url("../assets/site/mapblue.jpg")  ;
+    background: url("../assets/site/mapblue.jpg");
 }
 .card {
-    object-fit: contain;
     float: left;
-    padding: 20px 15px 15px 15px ;
-    width: 50%;
-   
- 
-    max-width: 12%;
-    height: 220px;
-    text-align: center;
-    box-sizing: border-box;
-   
-    font-family: "myFirstFont";
-    font-size: 20px;
-
-}
-.portraitcontainer {
-    padding: 15px, 15px, 15px, 15px;
-	margin-left: -5px;
     position: relative;
-    margin: 0 auto;
-
+    vertical-align: middle;
+    width: 12%;
+    text-align: center;
 }
-.bgleft {
-   width: 80%;
-   position: absolute;
-   left: 0px;
-   height: 100%;
-}
-.bgright {
-    
-    width: 20%;
-    position: absolute;
-    right: 0px;
-    height: 110%;
-background-color: rgb(150, 150, 150);
-}
-.input{
-bottom:0;
-position: absolute;
-border:
-}
-.gomb{
-position: absolute;
-bottom:0;
-right:0;
-background-color: fuchsia;
-}
-
-.card img:hover{
-	cursor: pointer;
+.card img:hover {
+    cursor: pointer;
 }
 .portraitcontainer {
     overflow-x: scroll;
-	overflow-x: hidden;
+    overflow-x: hidden;
     height: 100%;
 }
-.nagykep {
-    height: 200px;
-    width: 250px;
+.bgleft {
+    width: 80%;
+    position: absolute;
+    left: 0px;
+    height: 100%;
 }
-.nagykep.img{
-    height: 200px;
-    width: 250px;
-    overflow: hidden;
-    
-    float: left;
-	text-align: center;
+.bgright {
+    width: 20%;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    background:rgba(62,62,62,1.00);
+	color: white;
 }
-
+.input {
+    bottom: 20px;
+    right: 20px;
+    width: 75%;
+    position: absolute;
+}
+.gomb {
+    bottom: 15px;
+    left: 20px;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+	border: 2px solid;
+	border-color: rgba(255,255,255,1.00);
+    background-color: rgba(62,62,62,1.00);
+	color: white;
+  	font-size: 16px;
+	
+}
+.nagykep img{
+	width: 100%;
+	position: relative;
+}
+.nagkep{
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+.nameflag{
+	text-align: left;
+}
+.nameflag p{
+	margin-top: 5px;
+	margin-lef: 5px;
+	font-size: 33px;
+	display: inline-block;
+}
+.nameflag img{
+	display: inline-block;
+	right: 10px;
+	margin-top: 20px;
+	position: absolute;
+}
+.bio p{
+	margin: 5px;
+}
 
 
 
