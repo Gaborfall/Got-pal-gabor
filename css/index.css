@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "myFirstFont";
+    src: url("/fonts/Game\ of\ Thrones\ 2.ttf");}
+
+
 
 body {
     margin: 0 auto;
@@ -9,6 +14,7 @@ body {
     vertical-align: middle;
     width: 12%;
     text-align: center;
+
 }
 .card img:hover {
     cursor: pointer;
@@ -40,7 +46,7 @@ body {
 }
 .gomb {
     bottom: 15px;
-    left: 20px;
+    left: 10px;
     position: absolute;
     height: 30px;
     width: 30px;
@@ -48,14 +54,17 @@ body {
 	border-color: rgba(255,255,255,1.00);
     background-color: rgba(62,62,62,1.00);
 	color: white;
-  	font-size: 16px;
+      font-size: 16px;
+      
 	
 }
+
+
 .nagykep img{
 	width: 100%;
 	position: relative;
 }
-.nagkep{
+.nagykep{
 }
 ::-webkit-scrollbar { 
     display: none; 
@@ -67,18 +76,25 @@ body {
 	margin-top: 5px;
 	margin-lef: 5px;
 	font-size: 33px;
-	display: inline-block;
+    display: inline-block;
+    text-align: left;
+    margin-right: 50px;
 }
 .nameflag img{
 	display: inline-block;
 	right: 10px;
-	margin-top: 20px;
+    margin-top: 20px;
+    
 	position: absolute;
 }
 .bio p{
 	margin: 5px;
 }
+.cim{
+    font-family: "myFirstFont";
+text-align: center;
 
+}
 
 
 
