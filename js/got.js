@@ -123,14 +123,17 @@ function callbio(a, b, c, d) {
 function searchbio() {
   var name = document.querySelector('#namesearch').value;
   var what = new RegExp(name, 'i');
+  var found = false;
   document.querySelectorAll('.card').forEach(function (card) {
-    if (card.innerHTML.search(what) > 0) {
+    if (card.querySelector('div p').innerHTML.search(what) >= 0) {
       card.click.apply(card);
+      found = true;
     }
   });
+  if (!found) {
+    callbio('', 'Character not found!', '', null);
+  }
 }
 document.getElementById('namesearch').addEventListener('keydown', function (e) {
-  if (!e) { var e = window.event; }
   if (e.keyCode == 13) { searchbio(); }
 }, false);
-
